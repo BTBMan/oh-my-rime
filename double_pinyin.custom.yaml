@@ -1,0 +1,40 @@
+# cspell:disable
+patch:
+  schema/name: 自然码双拼
+
+  switches:
+    - name: ascii_mode
+      states: ['中', '英']
+      reset: 1
+    - name: emoji_suggestion
+      reset: 1
+    - name: simplification
+      reset: 1
+    - name: ascii_punct
+      states: ['，', ',']
+      reset: 0
+
+  translator/preedit_format: []
+
+  speller/delimiter: "'"
+
+  # 中英混合词汇 (缺自然码混输文件)
+  # cn_en:
+  #   dictionary: ""
+  #   user_dict: dicts/rime_ice.cn_en_flypy
+  #   db_class: stabledb
+  #   enable_completion: false
+  #   enable_sentence: false
+  #   initial_quality: 0.5
+  #   comment_format:
+  #     - xform/^.+$//
+
+  menu:
+    page_size: 9
+
+  key_binder/bindings:
+    - { when: composing, accept: ISO_Left_Tab, send: Page_Up }
+    - { when: composing, accept: Shift+Tab, send: Page_Up }
+    - { when: composing, accept: Tab, send: Page_Down }
+    - { when: paging, accept: bracketleft, send: Page_Up }
+    - { when: has_menu, accept: bracketright, send: Page_Down }

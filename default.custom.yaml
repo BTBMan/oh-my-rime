@@ -1,0 +1,30 @@
+# cspell:disable
+patch:
+  schema_list:
+    - schema: double_pinyin
+    - schema: rime_mint
+
+  menu:
+    page_size: 9
+
+  switcher/caption: ~
+  switcher/abbreviate_options: false
+  switcher/fold_options: false
+  switcher/hotkeys:
+    - Alt+space
+
+  ascii_composer/switch_key:
+    Caps_Lock: noop
+    Shift_L: commit_code
+    Shift_R: commit_code
+    Control_L: noop
+    Control_R: noop
+    Eisu_toggle: clear
+
+  # 需要在每个方案配置文件下覆盖
+  key_binder/bindings:
+    - { when: composing, accept: ISO_Left_Tab, send: Page_Up }
+    - { when: composing, accept: Shift+Tab, send: Page_Up }
+    - { when: composing, accept: Tab, send: Page_Down }
+    - { when: paging, accept: bracketleft, send: Page_Up }
+    - { when: has_menu, accept: bracketright, send: Page_Down }
