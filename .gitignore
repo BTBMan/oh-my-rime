@@ -7,7 +7,7 @@
 
 # 部署生成的文件
 build
-*.userdb
+# *.userdb
 
 # 自定义文件
 # *.custom.yaml
