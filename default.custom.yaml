@@ -3,6 +3,7 @@ patch:
   schema_list:
     - schema: double_pinyin
     - schema: rime_mint
+    - schema: t9
 
   menu:
     page_size: 9
